@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>QnA</title>
+    </head>
+    <body>
+        <h1>Quiz-upppp!!!</h1>
+        <h3>Press Enter to start.</h3>
+        
+        <h3> Press "t" for True and "f" for False.</h3>
+
+        <script type="text/javascript">
+            var questions = [
+                {
+                    q: "Does sun rise in the east?",
+                    a: "t"
+                },
+                {
+                    q: "Does sun set in the west?",
+                    a: "t"
+                },
+                {
+                    q: "Are there 4 main directions?",
+                    a: "t"
+                },
+                {
+                    q: "Is the earth round?",
+                    a: "t"
+                },
+                {
+                    q: "There are ten continents.",
+                    a: "f"
+                },
+                {
+                    q: "Sun revolves around the earth.",
+                    a: "f"
+                },
+                {
+                    q: "Earth has two moons.",
+                    a: "f"
+                },
+                {
+                    q: "Pluto is a planet.",
+                    a: "f"
+                },
+                {
+                    q: "Pacific Ocean is the largest ocean.",
+                    a: "t"
+                },
+                {
+                    q: "This quiz was boring.",
+                    a: "t"
+                }    
+            ];
+            document.onkeyup = function() {
+            
+            questions.forEach(function(items){
+                var answer= prompt(items.q);
+                // alert(answer);
+                if(answer.toLowerCase() === "t" || answer.toLowerCase() === "f")
+                {
+                    if(answer.toLowerCase() === items.a){
+                        alert("Yayyyy!!");
+                    }
+                    else{
+                        alert("Nayyyy!!");
+                    }
+                }
+                else{
+                    alert("Refer to the screen for instructions");
+                }
+               
+            });
+            };
+        </script>
+    </body>
+</html>
